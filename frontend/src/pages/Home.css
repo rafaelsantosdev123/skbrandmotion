@@ -59,15 +59,8 @@
 }
 
 .hero-title {
-  font-size: clamp(3rem, 8vw, 5rem);
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
   font-weight: 500;
-  margin-bottom: 16px;
-  letter-spacing: 2px;
-}
-
-.hero-subtitle {
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
-  font-weight: 300;
   margin-bottom: 24px;
   letter-spacing: 3px;
   text-transform: uppercase;

@@ -50,6 +50,22 @@ const Portfolio = () => {
       url: 'https://customer-assets.emergentagent.com/job_d5739f53-20d0-4b59-bef8-c19166e38000/artifacts/79892axe_IMG_1584.jpg',
       alt: 'Retrato noturno',
     },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_d5739f53-20d0-4b59-bef8-c19166e38000/artifacts/zse6tcno_IMG_1753.jpg',
+      alt: 'Retrato urbano criativo',
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_d5739f53-20d0-4b59-bef8-c19166e38000/artifacts/ldeihpie_IMG_1833.jpg',
+      alt: 'Retrato crepúsculo',
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_d5739f53-20d0-4b59-bef8-c19166e38000/artifacts/avdrxa8t_IMG_1867.jpg',
+      alt: 'Retrato silhueta entardecer',
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_d5739f53-20d0-4b59-bef8-c19166e38000/artifacts/i71vgqih_IMG_1876.jpg',
+      alt: 'Retrato perfil golden hour',
+    },
   ];
 
   return (

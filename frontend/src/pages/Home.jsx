@@ -22,7 +22,7 @@ const Home = () => {
       <section className="hero-section">
         <div className="hero-image-container">
           <img
-            src="https://customer-assets.emergentagent.com/job_d5739f53-20d0-4b59-bef8-c19166e38000/artifacts/pfu31ub7_Capa%20do%20site%20%281%29.png"
+            src="https://customer-assets.emergentagent.com/job_d5739f53-20d0-4b59-bef8-c19166e38000/artifacts/ho9r3mlu_Capa%20do%20site%20%283%29%20%281%29.png"
             alt="Sara Ketelin"
             className="hero-image"
           />
@@ -30,8 +30,7 @@ const Home = () => {
         </div>
         <div className="hero-content">
           <div className={`hero-text ${isVisible ? 'visible' : ''}`}>
-            <h1 className="hero-title">Sara Ketelin</h1>
-            <p className="hero-subtitle">SK Brand Motion</p>
+            <h1 className="hero-title">SK Brand Motion</h1>
             <p className="hero-description">
               Fotografia e vídeo com direção, intenção e cuidado no processo
             </p>

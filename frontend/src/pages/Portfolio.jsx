@@ -30,6 +30,26 @@ const Portfolio = () => {
       url: 'https://customer-assets.emergentagent.com/job_d5739f53-20d0-4b59-bef8-c19166e38000/artifacts/lm5x5hen_IMG_1127.jpg',
       alt: 'Retrato profissional',
     },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_d5739f53-20d0-4b59-bef8-c19166e38000/artifacts/okdzkivk_IMG_1162.jpg',
+      alt: 'Ensaio lifestyle',
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_d5739f53-20d0-4b59-bef8-c19166e38000/artifacts/7v5mehrb_IMG_1412.jpg',
+      alt: 'Retrato ao ar livre',
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_d5739f53-20d0-4b59-bef8-c19166e38000/artifacts/pqrzn880_IMG_1452.jpg',
+      alt: 'Ensaio silhueta',
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_d5739f53-20d0-4b59-bef8-c19166e38000/artifacts/ltruars7_IMG_1510.jpg',
+      alt: 'Retrato urbano',
+    },
+    {
+      url: 'https://customer-assets.emergentagent.com/job_d5739f53-20d0-4b59-bef8-c19166e38000/artifacts/79892axe_IMG_1584.jpg',
+      alt: 'Retrato noturno',
+    },
   ];
 
   return (

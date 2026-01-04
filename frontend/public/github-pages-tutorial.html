@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploy GitHub Pages - Portfolio Sara Ketelin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            color: #999;
+            font-size: 1.125rem;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .step {
+            background: rgba(0, 0, 0, 0.4);
+            border-left: 4px solid #fff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin-right: 15px;
+        }
+        
+        .step h3 {
+            display: inline-block;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .code-block {
+            background: #000;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            overflow-x: auto;
+            position: relative;
+        }
+        
+        .code-block code {
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            display: block;
+            white-space: pre;
+        }
+        
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+        
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .note {
+            background: rgba(255, 200, 0, 0.1);
+            border: 1px solid rgba(255, 200, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .warning {
+            background: rgba(255, 50, 50, 0.1);
+            border: 1px solid rgba(255, 50, 50, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .success {
+            background: rgba(50, 255, 50, 0.1);
+            border: 1px solid rgba(50, 255, 50, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .link {
+            color: #00bfff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .link:hover {
+            text-decoration: underline;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .highlight {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Deploy no GitHub Pages</h1>
+            <p class="subtitle">Portfolio Sara Ketelin - Guia Completo</p>
+        </div>
+        
+        <!-- PASSO 1 -->
+        <div class="section">
+            <h2>📋 Passo 1: Preparar o Projeto</h2>
+            
+            <div class="step">
+                <span class="step-number">1.1</span>
+                <h3>Baixar o Projeto</h3>
+                <p style="margin-top: 15px;">Primeiro, baixe o projeto usando um dos links:</p>
+                <ul>
+                    <li><a href="/sara-ketelin-portfolio.zip" class="link">Download ZIP</a> (73 KB)</li>
+                    <li><a href="/sara-ketelin-portfolio.bundle" class="link">Download Git Bundle</a> (263 KB)</li>
+                </ul>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">1.2</span>
+                <h3>Extrair os Arquivos</h3>
+                <p style="margin-top: 15px;">Extraia o ZIP ou clone o bundle:</p>
+                <div class="code-block">
+                    <code># Se baixou o ZIP, extraia normalmente
+
+# Se baixou o bundle:
+git clone sara-ketelin-portfolio.bundle portfolio-sara
+cd portfolio-sara</code>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PASSO 2 -->
+        <div class="section">
+            <h2>🐙 Passo 2: Criar Repositório no GitHub</h2>
+            
+            <div class="step">
+                <span class="step-number">2.1</span>
+                <h3>Acessar GitHub</h3>
+                <p style="margin-top: 15px;">Acesse <a href="https://github.com" target="_blank" class="link">github.com</a> e faça login (ou crie uma conta)</p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">2.2</span>
+                <h3>Criar Novo Repositório</h3>
+                <ol style="color: #ccc;">
+                    <li>Clique no botão <span class="highlight">+</span> no canto superior direito</li>
+                    <li>Selecione <span class="highlight">New repository</span></li>
+                    <li>Nome do repositório: <span class="highlight">portfolio-sara-ketelin</span></li>
+                    <li>Descrição: <span class="highlight">Portfolio profissional Sara Ketelin</span></li>
+                    <li>Marque como <span class="highlight">Public</span></li>
+                    <li><strong>NÃO</strong> inicialize com README, .gitignore ou license</li>
+                    <li>Clique em <span class="highlight">Create repository</span></li>
+                </ol>
+            </div>
+            
+            <div class="note">
+                <strong>📝 Importante:</strong> Anote o nome do seu usuário GitHub. Você vai precisar dele!<br>
+                Exemplo: Se seu usuário é <span class="highlight">saraketelin</span>, anote isso.
+            </div>
+        </div>
+        
+        <!-- PASSO 3 -->
+        <div class="section">
+            <h2>⚙️ Passo 3: Configurar o Projeto</h2>
+            
+            <div class="step">
+                <span class="step-number">3.1</span>
+                <h3>Editar package.json</h3>
+                <p style="margin-top: 15px;">Abra o arquivo <span class="highlight">frontend/package.json</span> e encontre a linha:</p>
+                <div class="code-block">
+                    <code>"homepage": "https://seu-usuario.github.io/portfolio-sara-ketelin",</code>
+                </div>
+                <p style="margin-top: 15px;">Substitua <span class="highlight">seu-usuario</span> pelo seu nome de usuário do GitHub.</p>
+                <p style="margin-top: 10px; color: #00bfff;">Exemplo: Se seu usuário é <span class="highlight">saraketelin</span>:</p>
+                <div class="code-block">
+                    <code>"homepage": "https://saraketelin.github.io/portfolio-sara-ketelin",</code>
+                </div>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">3.2</span>
+                <h3>Instalar Dependências</h3>
+                <p style="margin-top: 15px;">Abra o terminal/prompt na pasta do projeto e execute:</p>
+                <div class="code-block">
+                    <code>cd frontend
+yarn install</code>
+                </div>
+                <p style="margin-top: 15px; color: #999;">Aguarde a instalação concluir (pode levar 2-5 minutos).</p>
+            </div>
+        </div>
+        
+        <!-- PASSO 4 -->
+        <div class="section">
+            <h2>📤 Passo 4: Fazer Upload para o GitHub</h2>
+            
+            <div class="step">
+                <span class="step-number">4.1</span>
+                <h3>Inicializar Git (se necessário)</h3>
+                <p style="margin-top: 15px;">Se você baixou o ZIP, execute na pasta raiz do projeto:</p>
+                <div class="code-block">
+                    <code>git init
+git add .
+git commit -m "Initial commit: Portfolio Sara Ketelin"</code>
+                </div>
+                <div class="note">
+                    <strong>💡 Nota:</strong> Se você clonou o bundle, pule este passo, o Git já está configurado!
+                </div>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">4.2</span>
+                <h3>Conectar ao Repositório GitHub</h3>
+                <p style="margin-top: 15px;">Substitua <span class="highlight">SEU-USUARIO</span> pelo seu usuário do GitHub:</p>
+                <div class="code-block">
+                    <code>git remote add origin https://github.com/SEU-USUARIO/portfolio-sara-ketelin.git
+git branch -M main</code>
+                </div>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">4.3</span>
+                <h3>Fazer Push do Código</h3>
+                <div class="code-block">
+                    <code>git push -u origin main</code>
+                </div>
+                <p style="margin-top: 15px; color: #999;">O GitHub vai pedir suas credenciais. Use seu username e <strong>Personal Access Token</strong> (não a senha).</p>
+            </div>
+            
+            <div class="warning">
+                <strong>⚠️ Personal Access Token:</strong><br>
+                Se o GitHub pedir senha, você precisa criar um Token:<br>
+                <ol style="margin-top: 10px;">
+                    <li>Vá em: Settings → Developer settings → Personal access tokens → Tokens (classic)</li>
+                    <li>Generate new token (classic)</li>
+                    <li>Marque: <span class="highlight">repo</span> e <span class="highlight">workflow</span></li>
+                    <li>Copie o token e use como senha</li>
+                </ol>
+            </div>
+        </div>
+        
+        <!-- PASSO 5 -->
+        <div class="section">
+            <h2>🌐 Passo 5: Deploy no GitHub Pages</h2>
+            
+            <div class="step">
+                <span class="step-number">5.1</span>
+                <h3>Executar Deploy</h3>
+                <p style="margin-top: 15px;">Na pasta <span class="highlight">frontend</span>, execute:</p>
+                <div class="code-block">
+                    <code>cd frontend
+yarn deploy</code>
+                </div>
+                <p style="margin-top: 15px; color: #999;">
+                    Este comando vai:<br>
+                    1. Criar o build de produção<br>
+                    2. Fazer upload para o GitHub Pages<br>
+                    3. Aguarde 2-5 minutos
+                </p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">5.2</span>
+                <h3>Configurar GitHub Pages</h3>
+                <p style="margin-top: 15px;">No seu repositório do GitHub:</p>
+                <ol style="color: #ccc;">
+                    <li>Vá em <span class="highlight">Settings</span> (engrenagem)</li>
+                    <li>No menu lateral, clique em <span class="highlight">Pages</span></li>
+                    <li>Em <span class="highlight">Source</span>, selecione <span class="highlight">gh-pages</span> branch</li>
+                    <li>Clique em <span class="highlight">Save</span></li>
+                </ol>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">5.3</span>
+                <h3>Aguardar Deploy</h3>
+                <p style="margin-top: 15px;">Aguarde 2-3 minutos e seu site estará no ar!</p>
+                <div class="success">
+                    <strong>✅ URL do seu site será:</strong><br>
+                    <span style="font-size: 1.25rem; font-family: monospace;">
+                        https://SEU-USUARIO.github.io/portfolio-sara-ketelin
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- COMANDOS RESUMIDOS -->
+        <div class="section">
+            <h2>⚡ Resumo dos Comandos</h2>
+            <p style="margin-bottom: 20px; color: #999;">Cole estes comandos no terminal (substitua SEU-USUARIO):</p>
+            
+            <div class="code-block">
+                <code># 1. Entrar na pasta do projeto
+cd portfolio-sara  # ou o nome da sua pasta
+
+# 2. Instalar dependências
+cd frontend
+yarn install
+
+# 3. Conectar ao GitHub (se novo projeto)
+git remote add origin https://github.com/SEU-USUARIO/portfolio-sara-ketelin.git
+git branch -M main
+git push -u origin main
+
+# 4. Fazer deploy
+yarn deploy
+
+# Pronto! Site no ar em 2-3 minutos! 🎉</code>
+            </div>
+        </div>
+        
+        <!-- ATUALIZAR SITE -->
+        <div class="section">
+            <h2>🔄 Como Atualizar o Site</h2>
+            <p style="margin-bottom: 20px;">Quando você fizer mudanças no código:</p>
+            
+            <div class="code-block">
+                <code># 1. Salvar mudanças no Git
+git add .
+git commit -m "Descrição das mudanças"
+git push
+
+# 2. Fazer novo deploy
+cd frontend
+yarn deploy
+
+# Aguarde 2-3 minutos e as mudanças estarão online!</code>
+            </div>
+        </div>
+        
+        <!-- PROBLEMAS COMUNS -->
+        <div class="section">
+            <h2>🆘 Problemas Comuns</h2>
+            
+            <div class="step">
+                <h3>❌ Erro: "yarn: command not found"</h3>
+                <p style="margin-top: 15px;">Solução:</p>
+                <div class="code-block">
+                    <code>npm install -g yarn</code>
+                </div>
+            </div>
+            
+            <div class="step">
+                <h3>❌ Erro: "gh-pages: command not found"</h3>
+                <p style="margin-top: 15px;">Solução:</p>
+                <div class="code-block">
+                    <code>cd frontend
+yarn add gh-pages --dev</code>
+                </div>
+            </div>
+            
+            <div class="step">
+                <h3>❌ Site mostra página em branco</h3>
+                <p style="margin-top: 15px;">Verifique se o <span class="highlight">homepage</span> no package.json está correto!</p>
+            </div>
+            
+            <div class="step">
+                <h3>❌ Erro ao fazer push</h3>
+                <p style="margin-top: 15px;">Use Personal Access Token em vez de senha.</p>
+            </div>
+        </div>
+        
+        <!-- LINKS ÚTEIS -->
+        <div class="section">
+            <h2>🔗 Links Úteis</h2>
+            <ul>
+                <li><a href="https://github.com" target="_blank" class="link">GitHub</a></li>
+                <li><a href="https://nodejs.org" target="_blank" class="link">Download Node.js</a></li>
+                <li><a href="https://docs.github.com/en/pages" target="_blank" class="link">Documentação GitHub Pages</a></li>
+                <li><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token" target="_blank" class="link">Como criar Personal Access Token</a></li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; padding: 40px; color: #666;">
+            <p style="font-size: 1.125rem;">🎉 Pronto! Seu site estará online em minutos!</p>
+            <p style="margin-top: 20px;">© 2025 Sara Ketelin - SK Brand Motion</p>
+        </div>
+    </div>
+</body>
+</html>

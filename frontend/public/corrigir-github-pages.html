@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrigir GitHub Pages</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { font-size: 2.5rem; margin-bottom: 20px; color: #00ff88; }
+        h2 { 
+            font-size: 1.75rem; 
+            margin: 40px 0 20px; 
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
+        .warning {
+            background: rgba(255, 50, 50, 0.2);
+            border-left: 4px solid #ff3333;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .success {
+            background: rgba(50, 255, 50, 0.2);
+            border-left: 4px solid #33ff33;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .code {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        .code code {
+            color: #00ff88;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+        }
+        .step {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 4px solid #00ff88;
+        }
+        .step h3 {
+            color: #00ff88;
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+        ul, ol { margin-left: 25px; margin-top: 10px; }
+        li { margin-bottom: 10px; }
+        .highlight {
+            background: rgba(255,255,255,0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Corrigir GitHub Pages</h1>
+        
+        <div class="warning">
+            <strong>⚠️ Problema Identificado:</strong><br>
+            O site está mostrando o README.md porque o deploy não foi feito corretamente. 
+            O código está na branch <span class="highlight">main</span>, mas precisa estar 
+            na branch <span class="highlight">gh-pages</span> para funcionar.
+        </div>
+
+        <h2>✅ Solução (3 Passos Simples)</h2>
+
+        <div class="step">
+            <h3>Passo 1: Entre na Pasta do Projeto</h3>
+            <p>Abra o terminal/prompt na pasta onde está o projeto extraído:</p>
+            <div class="code">
+                <code>cd portfolio-sara
+cd frontend</code>
+            </div>
+        </div>
+
+        <div class="step">
+            <h3>Passo 2: Instale Dependências (se não instalou)</h3>
+            <div class="code">
+                <code>yarn install</code>
+            </div>
+            <p style="margin-top: 10px; color: #999;">Aguarde a instalação concluir (~2-3 minutos)</p>
+        </div>
+
+        <div class="step">
+            <h3>Passo 3: Fazer Deploy</h3>
+            <div class="code">
+                <code>yarn deploy</code>
+            </div>
+            <p style="margin-top: 10px; color: #999;">
+                Este comando vai:<br>
+                • Criar o build de produção<br>
+                • Enviar para a branch gh-pages<br>
+                • Aguarde 2-3 minutos
+            </p>
+        </div>
+
+        <div class="success">
+            <strong>✅ Pronto!</strong><br>
+            Após executar <span class="highlight">yarn deploy</span>, aguarde 2-3 minutos e 
+            seu site estará funcionando corretamente!
+        </div>
+
+        <h2>🔍 Verificar se Funcionou</h2>
+        
+        <ol>
+            <li>Vá no seu repositório do GitHub</li>
+            <li>Clique em <span class="highlight">Settings</span></li>
+            <li>Clique em <span class="highlight">Pages</span> (menu lateral)</li>
+            <li>Verifique se diz: <span class="highlight">Your site is live at...</span></li>
+            <li>Aguarde 2-3 minutos e acesse o link</li>
+        </ol>
+
+        <h2>⚠️ Se Ainda Não Funcionar</h2>
+
+        <div class="step">
+            <h3>Verifique o package.json</h3>
+            <p>Abra <span class="highlight">frontend/package.json</span> e confirme se a linha está correta:</p>
+            <div class="code">
+                <code>"homepage": "https://SEU-USUARIO.github.io/portfolio-sara-ketelin",</code>
+            </div>
+            <p style="margin-top: 15px;">
+                Substitua <span class="highlight">SEU-USUARIO</span> pelo seu username exato do GitHub.
+            </p>
+            <p style="margin-top: 10px; color: #ff8800;">
+                <strong>Exemplo:</strong> Se seu usuário é <span class="highlight">rafaelsantosdev</span>:
+            </p>
+            <div class="code">
+                <code>"homepage": "https://rafaelsantosdev.github.io/portfolio-sara-ketelin",</code>
+            </div>
+        </div>
+
+        <div class="step">
+            <h3>Depois de Corrigir o package.json</h3>
+            <p>Execute novamente:</p>
+            <div class="code">
+                <code>yarn deploy</code>
+            </div>
+        </div>
+
+        <h2>🆘 Comandos Completos (Copie e Cole)</h2>
+
+        <div class="code">
+            <code># 1. Entre na pasta frontend
+cd frontend
+
+# 2. Instale dependências (se necessário)
+yarn install
+
+# 3. Deploy!
+yarn deploy
+
+# Aguarde 2-3 minutos e acesse seu site!</code>
+        </div>
+
+        <h2>📝 Checklist</h2>
+        
+        <ul style="list-style: none; margin-left: 0;">
+            <li>☑️ Código enviado para GitHub (branch main) ✅ FEITO</li>
+            <li>☐ <span class="highlight">homepage</span> configurado corretamente no package.json</li>
+            <li>☐ <span class="highlight">yarn install</span> executado</li>
+            <li>☐ <span class="highlight">yarn deploy</span> executado</li>
+            <li>☐ Branch <span class="highlight">gh-pages</span> criada no GitHub</li>
+            <li>☐ GitHub Pages configurado para usar <span class="highlight">gh-pages</span></li>
+            <li>☐ Aguardar 2-3 minutos</li>
+        </ul>
+
+        <div class="success" style="margin-top: 40px;">
+            <strong>💡 Dica:</strong> O erro mais comum é esquecer de executar 
+            <span class="highlight">yarn deploy</span>. Este comando é ESSENCIAL 
+            para enviar o site buildado para a branch gh-pages!
+        </div>
+
+        <div style="text-align: center; margin-top: 60px; padding: 40px; color: #666;">
+            <p>Se precisar de mais ajuda, me avise! 🚀</p>
+        </div>
+    </div>
+</body>
+</html>

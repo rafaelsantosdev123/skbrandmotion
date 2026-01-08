@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploy GitHub Pages - Configurado</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+            color: #fff;
+            padding: 40px 20px;
+            line-height: 1.7;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        h1 { 
+            font-size: 3rem; 
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #00ff88, #00bfff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .success-badge {
+            display: inline-block;
+            background: rgba(0,255,136,0.2);
+            border: 2px solid #00ff88;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .section {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: #00ff88;
+        }
+        .download-box {
+            background: rgba(0,191,255,0.1);
+            border: 2px solid #00bfff;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #00bfff;
+            color: #000;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,191,255,0.5);
+        }
+        .command-box {
+            background: #0a0a0a;
+            border: 2px solid #00ff88;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            position: relative;
+        }
+        .command-box code {
+            color: #00ff88;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            display: block;
+            white-space: pre-wrap;
+            line-height: 1.8;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,255,136,0.2);
+            border: 1px solid #00ff88;
+            color: #00ff88;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+        }
+        .copy-btn:hover {
+            background: rgba(0,255,136,0.4);
+        }
+        .step {
+            background: rgba(0,0,0,0.4);
+            border-left: 5px solid #00ff88;
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #00ff88;
+            color: #000;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        .step h3 {
+            display: inline-block;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #00ff88;
+        }
+        .info-box {
+            background: rgba(0,191,255,0.1);
+            border-left: 4px solid #00bfff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .warning-box {
+            background: rgba(255,200,0,0.1);
+            border-left: 4px solid #ffc800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .success-box {
+            background: rgba(0,255,136,0.1);
+            border-left: 4px solid #00ff88;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .highlight {
+            background: rgba(0,255,136,0.2);
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: #00ff88;
+        }
+        .config-item {
+            background: rgba(0,0,0,0.3);
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 3px solid #00bfff;
+        }
+        ul, ol { margin-left: 25px; margin-top: 15px; }
+        li { margin-bottom: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Projeto Configurado!</h1>
+            <div class="success-badge">✅ Pronto para Deploy</div>
+            <p style="margin-top: 20px; font-size: 1.125rem; color: #999;">
+                Portfolio Sara Ketelin - GitHub Pages
+            </p>
+        </div>
+
+        <!-- DOWNLOAD -->
+        <div class="section">
+            <h2>📥 1. Baixe o Projeto Atualizado</h2>
+            <div class="download-box">
+                <p style="margin-bottom: 20px; font-size: 1.125rem;">
+                    <strong>Projeto com configuração completa do GitHub Pages</strong>
+                </p>
+                <a href="/sara-ketelin-portfolio-github.zip" download class="download-btn">
+                    ⬇️ Download ZIP (67 KB)
+                </a>
+                <p style="margin-top: 20px; color: #999; font-size: 0.95rem;">
+                    Já configurado com gh-pages, homepage e scripts de deploy
+                </p>
+            </div>
+
+            <div class="info-box">
+                <strong>✨ O que já está configurado:</strong>
+                <div class="config-item">
+                    ✅ <span class="highlight">gh-pages</span> instalado como dependência
+                </div>
+                <div class="config-item">
+                    ✅ <span class="highlight">homepage</span> configurado: https://rafaelsantosdev123.github.io/frontend
+                </div>
+                <div class="config-item">
+                    ✅ Scripts <span class="highlight">predeploy</span> e <span class="highlight">deploy</span> adicionados
+                </div>
+                <div class="config-item">
+                    ✅ Pronto para <span class="highlight">yarn deploy</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONFIGURAÇÃO APLICADA -->
+        <div class="section">
+            <h2>⚙️ 2. Configuração Aplicada</h2>
+            
+            <p style="margin-bottom: 20px;">As seguintes configurações já estão no código:</p>
+
+            <h3 style="color: #00bfff; margin-top: 30px; margin-bottom: 15px;">📄 package.json</h3>
+            <div class="command-box">
+                <code>{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://rafaelsantosdev123.github.io/frontend",
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
+    "test": "craco test"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}</code>
+            </div>
+        </div>
+
+        <!-- COMANDOS PARA EXECUTAR -->
+        <div class="section">
+            <h2>💻 3. Comandos para Executar</h2>
+
+            <div class="step">
+                <span class="step-number">1</span>
+                <h3>Extrair e Entrar na Pasta</h3>
+                <p style="margin-top: 15px;">Extraia o ZIP e abra o terminal na pasta do projeto:</p>
+                <div class="command-box">
+                    <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                    <code>cd portfolio-sara
+cd frontend</code>
+                </div>
+            </div>
+
+            <div class="step">
+                <span class="step-number">2</span>
+                <h3>Instalar Dependências</h3>
+                <div class="command-box">
+                    <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                    <code>yarn install</code>
+                </div>
+                <p style="margin-top: 15px; color: #999;">
+                    Aguarde a instalação concluir (~2-3 minutos)
+                </p>
+            </div>
+
+            <div class="step">
+                <span class="step-number">3</span>
+                <h3>Conectar ao GitHub</h3>
+                <div class="warning-box">
+                    <strong>⚠️ IMPORTANTE:</strong> Você precisa ter um repositório criado no GitHub primeiro!
+                </div>
+                <p style="margin-bottom: 15px;">Se ainda não criou, crie agora:</p>
+                <ol style="color: #ccc; margin-left: 40px;">
+                    <li>Acesse <a href="https://github.com/new" target="_blank" style="color: #00bfff;">github.com/new</a></li>
+                    <li>Nome do repositório: <span class="highlight">frontend</span></li>
+                    <li>Marque: <span class="highlight">Public</span></li>
+                    <li>NÃO inicialize com README, .gitignore ou license</li>
+                    <li>Clique em <span class="highlight">Create repository</span></li>
+                </ol>
+
+                <p style="margin: 20px 0;">Depois, conecte o projeto ao repositório:</p>
+                <div class="command-box">
+                    <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                    <code>cd ..
+git init
+git add .
+git commit -m "config deploy github pages"
+git remote add origin https://github.com/rafaelsantosdev123/frontend.git
+git branch -M main
+git push -u origin main</code>
+                </div>
+            </div>
+
+            <div class="step">
+                <span class="step-number">4</span>
+                <h3>Deploy no GitHub Pages</h3>
+                <div class="command-box">
+                    <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                    <code>cd frontend
+yarn deploy</code>
+                </div>
+                <p style="margin-top: 15px; color: #999;">
+                    Este comando vai:<br>
+                    • Criar o build de produção<br>
+                    • Enviar para a branch gh-pages<br>
+                    • Publicar no GitHub Pages
+                </p>
+            </div>
+
+            <div class="step">
+                <span class="step-number">5</span>
+                <h3>Configurar GitHub Pages</h3>
+                <ol style="color: #ccc; margin-left: 40px;">
+                    <li>Vá no repositório: <a href="https://github.com/rafaelsantosdev123/frontend" target="_blank" style="color: #00bfff;">github.com/rafaelsantosdev123/frontend</a></li>
+                    <li>Clique em <span class="highlight">Settings</span></li>
+                    <li>No menu lateral, clique em <span class="highlight">Pages</span></li>
+                    <li>Em <span class="highlight">Source</span>, selecione <span class="highlight">gh-pages</span> branch</li>
+                    <li>Clique em <span class="highlight">Save</span></li>
+                </ol>
+            </div>
+
+            <div class="success-box" style="margin-top: 40px;">
+                <h3 style="color: #00ff88; margin-bottom: 15px;">✅ Pronto!</h3>
+                <p style="font-size: 1.125rem; margin-bottom: 10px;">
+                    Seu site estará online em 2-3 minutos em:
+                </p>
+                <div style="background: rgba(0,0,0,0.5); padding: 15px; border-radius: 8px; margin-top: 15px;">
+                    <code style="color: #00ff88; font-size: 1.25rem;">
+                        https://rafaelsantosdev123.github.io/frontend
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMANDOS RESUMIDOS -->
+        <div class="section">
+            <h2>⚡ Comandos Resumidos (Copie Tudo)</h2>
+            <div class="command-box">
+                <button class="copy-btn" onclick="copyCode(this)">Copiar Tudo</button>
+                <code># 1. Entrar na pasta
+cd portfolio-sara
+
+# 2. Instalar dependências
+cd frontend
+yarn install
+
+# 3. Conectar ao GitHub
+cd ..
+git init
+git add .
+git commit -m "config deploy github pages"
+git remote add origin https://github.com/rafaelsantosdev123/frontend.git
+git branch -M main
+git push -u origin main
+
+# 4. Deploy
+cd frontend
+yarn deploy
+
+# Aguarde 2-3 minutos e acesse:
+# https://rafaelsantosdev123.github.io/frontend</code>
+            </div>
+        </div>
+
+        <!-- ATUALIZAR SITE -->
+        <div class="section">
+            <h2>🔄 Atualizar Site (Após Mudanças)</h2>
+            <p style="margin-bottom: 20px;">Quando você fizer alterações no código:</p>
+            <div class="command-box">
+                <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                <code>git add .
+git commit -m "Atualização do site"
+git push origin main
+
+cd frontend
+yarn deploy</code>
+            </div>
+        </div>
+
+        <!-- TROUBLESHOOTING -->
+        <div class="section">
+            <h2>🆘 Problemas Comuns</h2>
+
+            <div class="step">
+                <h3>❌ Erro: "yarn: command not found"</h3>
+                <div class="command-box">
+                    <code>npm install -g yarn</code>
+                </div>
+            </div>
+
+            <div class="step">
+                <h3>❌ Erro ao fazer push (senha)</h3>
+                <p style="margin: 15px 0;">Use Personal Access Token:</p>
+                <ol style="color: #ccc; margin-left: 40px;">
+                    <li>GitHub → Settings → Developer settings</li>
+                    <li>Personal access tokens → Tokens (classic)</li>
+                    <li>Generate new token (classic)</li>
+                    <li>Marque: <span class="highlight">repo</span> e <span class="highlight">workflow</span></li>
+                    <li>Copie o token e use como senha</li>
+                </ol>
+            </div>
+
+            <div class="step">
+                <h3>❌ Site mostra página em branco</h3>
+                <p style="margin: 15px 0;">Verifique se:</p>
+                <ul style="color: #ccc; margin-left: 40px;">
+                    <li>O <span class="highlight">homepage</span> está correto no package.json</li>
+                    <li>A branch <span class="highlight">gh-pages</span> foi criada</li>
+                    <li>GitHub Pages está configurado para usar <span class="highlight">gh-pages</span></li>
+                    <li>Aguardou 2-3 minutos após o deploy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; padding: 60px 20px; color: #666;">
+            <p style="font-size: 1.5rem; margin-bottom: 20px;">🎉 Boa sorte com o deploy!</p>
+            <p>© 2025 Sara Ketelin - SK Brand Motion</p>
+        </div>
+    </div>
+
+    <script>
+        function copyCode(button) {
+            const codeBlock = button.parentElement.querySelector('code');
+            const text = codeBlock.textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                button.textContent = '✓ Copiado!';
+                setTimeout(() => {
+                    button.textContent = 'Copiar';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
